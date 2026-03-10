@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LegalTech Executive Roundtable 2026 | London | Global Network Forums</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:      #0b1929;
+  --navy-2:    #112236;
+  --navy-3:    #162e47;
+  --gold:      #c8a84b;
+  --gold-lt:   #e2c97e;
+  --gold-dim:  rgba(200,168,75,0.18);
+  --cream:     #f7f3ec;
+  --cream-2:   #f0ebe1;
+  --white:     #ffffff;
+  --text-dark: #1a2535;
+  --text-mid:  #4a5668;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
+
+.label {
+  display: inline-block;
+  font-size: 10px; font-weight: 700; letter-spacing: 3.5px;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 700; line-height: 1.1; color: var(--navy);
+}
+.section-title.light { color: var(--white); }
+.section-body { font-size: 15px; line-height: 1.85; color: var(--text-mid); max-width: 600px; }
+.section-body.light { color: rgba(255,255,255,0.6); }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(11,25,41,0.96);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,168,75,0.15);
+  padding: 0 5vw;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 66px;
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; }
+.nav-brand-mark {
+  width: 32px; height: 32px; border-radius: 2px; background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 16px; color: var(--navy);
+  flex-shrink: 0;
+}
+.nav-brand-text { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--white); line-height: 1.3; }
+.nav-brand-text span { color: var(--gold); }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.5px; color: rgba(255,255,255,0.65); transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-btn { background: var(--gold); color: var(--navy) !important; padding: 9px 22px; border-radius: 2px; font-size: 12px !important; font-weight: 700 !important; letter-spacing: 1px !important; transition: background 0.2s !important; }
+.nav-btn:hover { background: var(--gold-lt) !important; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+.mobile-menu {
+  display: none; position: fixed; top: 66px; left: 0; right: 0;
+  background: rgba(11,25,41,0.98); backdrop-filter: blur(12px);
+  padding: 24px 5vw 32px;
+  border-bottom: 1px solid rgba(200,168,75,0.15);
+  z-index: 199; flex-direction: column; gap: 0;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { padding: 14px 0; font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.75); border-bottom: 1px solid rgba(255,255,255,0.07); transition: color 0.2s; }
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu .mob-cta { margin-top: 20px; background: var(--gold); color: var(--navy); text-align: center; padding: 14px; font-weight: 700; font-size: 13px; letter-spacing: 1px; border-radius: 2px; border-bottom: none; }
+
+/* HERO */
+.hero {
+  min-height: 100vh; background: var(--navy);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 120px 5vw 80px; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 30%, rgba(200,168,75,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 10% 80%, rgba(200,168,75,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-grid-lines { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero-grid-lines::before { content: ''; position: absolute; top: 0; right: 15vw; bottom: 0; width: 1px; background: rgba(200,168,75,0.1); }
+.hero-grid-lines::after  { content: ''; position: absolute; top: 0; right: 35vw; bottom: 0; width: 1px; background: rgba(200,168,75,0.05); }
+.hero-eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; animation: fadeUp 0.8s ease both; }
+.hero-eyebrow-line { width: 40px; height: 1px; background: var(--gold); }
+.hero-eyebrow-text { font-size: 11px; font-weight: 600; letter-spacing: 3.5px; text-transform: uppercase; color: var(--gold); }
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 8vw, 110px); font-weight: 700; line-height: 0.95;
+  color: var(--white); max-width: 900px;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-sub {
+  font-size: clamp(14px, 1.5vw, 17px); color: rgba(255,255,255,0.55);
+  font-weight: 300; max-width: 520px; line-height: 1.8;
+  margin-top: 24px; margin-bottom: 48px;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+.hero-meta-row {
+  display: flex; gap: 0;
+  border: 1px solid rgba(200,168,75,0.2); border-radius: 2px;
+  overflow: hidden; width: fit-content; max-width: 100%;
+  margin-bottom: 44px; animation: fadeUp 0.8s 0.3s ease both; flex-wrap: wrap;
+}
+.hero-meta-item { padding: 16px 28px; border-right: 1px solid rgba(200,168,75,0.2); display: flex; flex-direction: column; gap: 3px; }
+.hero-meta-item:last-child { border-right: none; }
+.meta-label { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); }
+.meta-value { font-size: 14px; font-weight: 500; color: var(--white); white-space: nowrap; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.8s 0.4s ease both; }
+.btn-gold { background: var(--gold); color: var(--navy); padding: 15px 36px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; transition: background 0.2s, transform 0.15s; display: inline-block; }
+.btn-gold:hover { background: var(--gold-lt); transform: translateY(-1px); }
+.btn-outline { border: 1px solid rgba(200,168,75,0.4); color: var(--gold); padding: 14px 36px; border-radius: 2px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; transition: border-color 0.2s, background 0.2s; display: inline-block; }
+.btn-outline:hover { border-color: var(--gold); background: var(--gold-dim); }
+.hero-scroll-hint { position: absolute; bottom: 32px; right: 5vw; display: flex; align-items: center; gap: 10px; animation: fadeUp 1s 0.6s ease both; }
+.hero-scroll-hint span { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.25); font-weight: 500; }
+.scroll-line { width: 40px; height: 1px; background: rgba(255,255,255,0.2); position: relative; overflow: hidden; }
+.scroll-line::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: var(--gold); animation: scrollPulse 2s 1.5s ease infinite; }
+
+/* STATS */
+.stats-bar { background: var(--navy-2); border-bottom: 1px solid rgba(200,168,75,0.12); }
+.stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-cell { padding: 32px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.05); }
+.stat-cell:last-child { border-right: none; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 46px; font-weight: 700; color: var(--gold); line-height: 1; display: block; }
+.stat-lbl { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-top: 6px; display: block; }
+
+/* ABOUT */
+.about { padding: 100px 5vw; background: var(--cream); }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; max-width: 1200px; margin: 0 auto; }
+.about-feature-list { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+.about-feature { display: flex; gap: 16px; align-items: flex-start; }
+.feature-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; }
+.feature-text h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+.feature-text p { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+.format-card { background: var(--navy); padding: 40px; border-radius: 2px; border: 1px solid rgba(200,168,75,0.1); }
+.format-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 28px; }
+.compare-row { display: grid; grid-template-columns: 1fr 20px 1fr; gap: 0; }
+.compare-col-head { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 18px; }
+.compare-col-head.theirs { color: rgba(255,255,255,0.3); }
+.compare-col-head.ours   { color: var(--gold); }
+.compare-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.compare-col ul li { font-size: 13px; line-height: 1.5; display: flex; gap: 10px; align-items: flex-start; }
+.theirs-col ul li { color: rgba(255,255,255,0.35); }
+.ours-col ul li   { color: rgba(255,255,255,0.85); }
+.theirs-col ul li::before { content: '✕'; font-size: 10px; color: rgba(255,255,255,0.2); flex-shrink: 0; margin-top: 2px; }
+.ours-col ul li::before   { content: '✓'; font-size: 10px; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.compare-divider { background: rgba(200,168,75,0.15); }
+
+/* TRACKS */
+.tracks { background: var(--navy); padding: 100px 5vw; }
+.tracks-header { max-width: 1200px; margin: 0 auto 60px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.tracks-nav { display: flex; gap: 8px; flex-wrap: wrap; }
+.track-tab { padding: 8px 18px; border-radius: 2px; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; border: 1px solid rgba(200,168,75,0.25); color: rgba(255,255,255,0.45); transition: 0.2s; background: transparent; -webkit-appearance: none; }
+.track-tab:hover, .track-tab.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.tracks-content { max-width: 1200px; margin: 0 auto; }
+.track-panel { display: none; }
+.track-panel.active { display: block; }
+.track-panel-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: var(--white); margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid rgba(200,168,75,0.15); }
+.sessions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.session-card { padding: 24px; border-radius: 2px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid var(--gold); transition: background 0.2s, transform 0.2s; }
+.session-card:hover { background: rgba(200,168,75,0.06); transform: translateY(-2px); }
+.session-card h4 { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 8px; line-height: 1.4; }
+.session-card p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
+/* TIMELINE */
+.timeline-section { background: var(--cream-2); padding: 100px 5vw; }
+.timeline-inner { max-width: 800px; margin: 0 auto; }
+.timeline { display: flex; flex-direction: column; position: relative; }
+.timeline::before { content: ''; position: absolute; left: 72px; top: 8px; bottom: 8px; width: 1px; background: rgba(200,168,75,0.2); }
+.tl-item { display: flex; gap: 28px; align-items: flex-start; padding-bottom: 32px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-time { width: 72px; flex-shrink: 0; font-size: 11px; font-weight: 600; color: var(--gold); letter-spacing: 0.5px; padding-top: 2px; text-align: right; padding-right: 22px; position: relative; }
+.tl-time::after { content: ''; position: absolute; right: -5px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); border: 2px solid var(--cream-2); }
+.tl-item.dim .tl-time::after { background: rgba(200,168,75,0.3); }
+.tl-body h4 { font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.4; }
+.tl-item.dim .tl-body h4 { color: var(--text-mid); font-weight: 400; }
+.tl-body p { font-size: 13px; color: var(--text-mid); margin-top: 3px; }
+
+/* WHO */
+.who { background: var(--navy-3); padding: 100px 5vw; }
+.who-inner { max-width: 1200px; margin: 0 auto; }
+.roles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.role-card { background: rgba(255,255,255,0.03); padding: 28px 24px; border: 1px solid rgba(255,255,255,0.06); transition: background 0.2s, border-color 0.2s; }
+.role-card:hover { background: rgba(200,168,75,0.06); border-color: rgba(200,168,75,0.3); }
+.role-icon { font-size: 22px; margin-bottom: 12px; }
+.role-card h4 { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.role-card p { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* SPONSORS */
+.sponsors-section { background: var(--cream); padding: 100px 5vw; }
+.sponsors-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.sponsor-benefits { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+.sponsor-benefit { display: flex; gap: 14px; align-items: flex-start; }
+.sb-num { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: var(--gold); width: 28px; flex-shrink: 0; line-height: 1.3; }
+.sb-text { font-size: 14px; color: var(--text-mid); line-height: 1.7; padding-top: 2px; }
+.sb-text strong { color: var(--navy); font-weight: 600; }
+.sponsors-right { background: var(--navy); padding: 48px 40px; border-radius: 2px; border: 1px solid rgba(200,168,75,0.12); }
+.sponsors-right h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.sponsors-right p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 32px; }
+.sponsor-form-fields { display: flex; flex-direction: column; gap: 12px; }
+.form-field { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 2px; padding: 13px 16px; font-size: 14px; color: var(--white); font-family: 'DM Sans', sans-serif; width: 100%; outline: none; transition: border-color 0.2s; }
+.form-field::placeholder { color: rgba(255,255,255,0.3); }
+.form-field:focus { border-color: var(--gold); }
+.form-submit { background: var(--gold); color: var(--navy); padding: 15px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; width: 100%; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; transition: background 0.2s; margin-top: 4px; }
+.form-submit:hover { background: var(--gold-lt); }
+
+/* PASSES */
+.passes-section { background: var(--navy); padding: 100px 5vw; }
+.passes-inner { max-width: 1200px; margin: 0 auto; }
+.passes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 760px; }
+.pass-card { padding: 36px; border-radius: 2px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); transition: border-color 0.2s; }
+.pass-card:hover { border-color: var(--gold); }
+.pass-tier { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.pass-price { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 4px; }
+.pass-price sup { font-size: 24px; vertical-align: top; margin-top: 8px; display: inline-block; }
+.pass-note { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 24px; }
+.pass-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.pass-features li { font-size: 13px; color: rgba(255,255,255,0.65); display: flex; gap: 10px; }
+.pass-features li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
+
+/* CTA */
+.cta-band { background: var(--gold); padding: 80px 5vw; text-align: center; }
+.cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 52px); font-weight: 700; color: var(--navy); margin-bottom: 14px; }
+.cta-band p { font-size: 16px; color: rgba(11,25,41,0.65); max-width: 480px; margin: 0 auto 36px; line-height: 1.7; }
+.cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-dark { background: var(--navy); color: var(--white); padding: 15px 40px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; transition: background 0.2s; display: inline-block; }
+.btn-dark:hover { background: var(--navy-2); }
+.btn-dark-outline { border: 2px solid var(--navy); color: var(--navy); padding: 13px 40px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; transition: background 0.2s; display: inline-block; background: transparent; }
+.btn-dark-outline:hover { background: rgba(11,25,41,0.1); }
+
+/* FOOTER */
+footer { background: var(--navy); padding: 52px 5vw; border-top: 1px solid rgba(200,168,75,0.12); }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: var(--white); }
+.footer-brand span { color: var(--gold); }
+.footer-info { font-size: 13px; color: rgba(255,255,255,0.3); line-height: 1.8; text-align: right; }
+.footer-info a { color: var(--gold); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scrollPulse { 0% { left: -100%; } 50% { left: 0; } 100% { left: 100%; } }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .about-inner, .sponsors-inner { grid-template-columns: 1fr; gap: 48px; }
+  .roles-grid { grid-template-columns: repeat(2, 1fr); }
+  .tracks-header { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero { padding: 100px 20px 64px; }
+  .hero h1 { font-size: clamp(42px, 12vw, 72px); }
+  .hero-meta-row { width: 100%; }
+  .hero-meta-item { padding: 14px 18px; flex: 1; min-width: 120px; }
+  .meta-value { font-size: 13px; white-space: normal; }
+  .hero-scroll-hint { display: none; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-cell { padding: 24px 16px; }
+  .stat-num { font-size: 38px; }
+  .about, .tracks, .timeline-section, .who, .sponsors-section, .passes-section, .cta-band { padding: 72px 20px; }
+  .about-inner, .sponsors-inner { gap: 40px; }
+  .format-card { padding: 28px 24px; }
+  .roles-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .passes-grid { grid-template-columns: 1fr; max-width: 100%; }
+  .sessions-grid { grid-template-columns: 1fr; }
+  .track-tab { font-size: 10px; padding: 7px 13px; }
+  .timeline::before { left: 60px; }
+  .tl-time { width: 60px; padding-right: 18px; font-size: 10px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-info { text-align: left; }
+  .sponsors-right { padding: 32px 24px; }
+}
+@media (max-width: 480px) {
+  .hero-meta-row { flex-direction: column; width: 100%; }
+  .hero-meta-item { border-right: none; border-bottom: 1px solid rgba(200,168,75,0.2); }
+  .hero-meta-item:last-child { border-bottom: none; }
+  .roles-grid { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .hero-actions { flex-direction: column; }
+  .btn-gold, .btn-outline { text-align: center; }
+  .cta-actions { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-brand-mark">G</div>
+    <div class="nav-brand-text">Global <span>Network</span> Forums</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#tracks">Tracks</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#who">Who Attends</a></li>
+    <li><a href="#sponsors">Sponsor</a></li>
+    <li><a href="#register" class="nav-btn">Register</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about"    onclick="toggleMenu()">About the Event</a>
+  <a href="#tracks"   onclick="toggleMenu()">Discussion Tracks</a>
+  <a href="#agenda"   onclick="toggleMenu()">Agenda</a>
+  <a href="#who"      onclick="toggleMenu()">Who Attends</a>
+  <a href="#sponsors" onclick="toggleMenu()">Sponsorship</a>
+  <a href="#register" onclick="toggleMenu()" class="mob-cta">Register Interest</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid-lines"></div>
+  <div class="hero-eyebrow">
+    <div class="hero-eyebrow-line"></div>
+    <div class="hero-eyebrow-text">London &middot; 30 June 2026 &middot; Executive Forum</div>
+  </div>
+  <h1>LegalTech<br><em>Executive</em><br>Roundtable</h1>
+  <p class="hero-sub">A closed-door forum for senior legal leaders navigating technology, automation, and the future of legal services.</p>
+  <div class="hero-meta-row">
+    <div class="hero-meta-item">
+      <span class="meta-label">Date</span>
+      <span class="meta-value">30 June 2026</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="meta-label">Location</span>
+      <span class="meta-value">London, UK</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="meta-label">Format</span>
+      <span class="meta-value">Closed-Door Roundtable</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="meta-label">Attendees</span>
+      <span class="meta-value">60&ndash;80 Executives</span>
+    </div>
+  </div>
+  <div class="hero-actions">
+    <a href="#register" class="btn-gold">Request a Delegate Pass</a>
+    <a href="#sponsors" class="btn-outline">Sponsorship Enquiry</a>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-cell"><span class="stat-num">60&ndash;80</span><span class="stat-lbl">Senior Executives</span></div>
+    <div class="stat-cell"><span class="stat-num">25</span><span class="stat-lbl">Roundtable Sessions</span></div>
+    <div class="stat-cell"><span class="stat-num">5</span><span class="stat-lbl">Discussion Tracks</span></div>
+    <div class="stat-cell"><span class="stat-num">1</span><span class="stat-lbl">Day. No Distractions.</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-left">
+      <span class="label">About the Event</span>
+      <h2 class="section-title">Where Legal Leaders<br>Talk Frankly About What's Next</h2>
+      <p class="section-body" style="margin-top:20px;">AI, contract automation, and shifting compliance demands are changing the legal landscape faster than most teams can track. This forum exists to cut through the noise.</p>
+      <p class="section-body" style="margin-top:12px;">The LegalTech Executive Roundtable brings together 60&ndash;80 General Counsel, Heads of Legal, Legal Operations Directors, and Legal Innovation Leaders for a single day of structured peer discussion across 5 specialist tracks.</p>
+      <div class="about-feature-list">
+        <div class="about-feature">
+          <div class="feature-dot"></div>
+          <div class="feature-text">
+            <h4>25 Closed-Door Roundtables</h4>
+            <p>Groups of 10&ndash;15 executives, each session facilitated by an experienced legal or technology leader. Chatham House rules.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-dot"></div>
+          <div class="feature-text">
+            <h4>Personalised Agenda</h4>
+            <p>You select which sessions to attend in advance. Every hour of your day is relevant to your priorities.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-dot"></div>
+          <div class="feature-text">
+            <h4>Curated 1-on-1 Meetings</h4>
+            <p>Multiple structured networking slots throughout the day &mdash; matched to your current challenges and interests.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-dot"></div>
+          <div class="feature-text">
+            <h4>Canap&eacute; &amp; Drinks Reception</h4>
+            <p>The day closes with an evening reception &mdash; the ideal setting to continue conversations from the room.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="format-card">
+        <h3>Not Another Conference</h3>
+        <div class="compare-row">
+          <div class="compare-col theirs-col">
+            <div class="compare-col-head theirs">Traditional Conference</div>
+            <ul>
+              <li>200&ndash;1,000+ attendees</li>
+              <li>Keynotes &amp; presentations</li>
+              <li>Exhibition halls &amp; booths</li>
+              <li>Generic networking</li>
+              <li>You're in the audience</li>
+              <li>3 days out of the office</li>
+            </ul>
+          </div>
+          <div class="compare-divider"></div>
+          <div class="compare-col ours-col">
+            <div class="compare-col-head ours">Our Roundtable</div>
+            <ul>
+              <li>60&ndash;80 curated executives</li>
+              <li>Peer-led discussions</li>
+              <li>No expo, no booths</li>
+              <li>Structured 1-to-1 meetings</li>
+              <li>You shape the agenda</li>
+              <li>One focused day</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKS -->
+<section class="tracks" id="tracks">
+  <div class="tracks-header">
+    <div>
+      <span class="label">Discussion Tracks</span>
+      <h2 class="section-title light">5 Tracks. 25 Sessions.</h2>
+    </div>
+    <div class="tracks-nav">
+      <button class="track-tab active" onclick="showTrack(0,this)">Track 1</button>
+      <button class="track-tab"        onclick="showTrack(1,this)">Track 2</button>
+      <button class="track-tab"        onclick="showTrack(2,this)">Track 3</button>
+      <button class="track-tab"        onclick="showTrack(3,this)">Track 4</button>
+      <button class="track-tab"        onclick="showTrack(4,this)">Track 5</button>
+    </div>
+  </div>
+  <div class="tracks-content">
+
+    <div class="track-panel active" id="track-0">
+      <div class="track-panel-title">AI, Automation &amp; Smart Workflows</div>
+      <div class="sessions-grid">
+        <div class="session-card"><h4>Use Cases for GenAI in Contract Drafting &amp; Review</h4><p>Where is AI genuinely saving time, and where does human oversight remain non-negotiable?</p></div>
+        <div class="session-card"><h4>Automating NDAs, MSAs &amp; Routine Legal Documents</h4><p>Practical approaches to document automation that actually get adopted across the business.</p></div>
+        <div class="session-card"><h4>AI in Legal Research &mdash; Value or Hype?</h4><p>Cutting through the noise on AI research tools: what delivers ROI and what doesn't.</p></div>
+        <div class="session-card"><h4>Risks &amp; Governance in Deploying AI in Legal Teams</h4><p>Building the right guardrails before you scale AI across your legal function.</p></div>
+        <div class="session-card"><h4>Building a Business Case for LegalTech Investment</h4><p>How to get board and C-suite sign-off for technology spend in a cost-conscious environment.</p></div>
+      </div>
+    </div>
+
+    <div class="track-panel" id="track-1">
+      <div class="track-panel-title">Legal Operations &amp; Transformation</div>
+      <div class="sessions-grid">
+        <div class="session-card"><h4>LegalOps Maturity Models &mdash; Where Are You Now?</h4><p>Benchmarking your legal operations function and identifying the highest-impact next steps.</p></div>
+        <div class="session-card"><h4>Managing Legal Spend &amp; Driving Cost Transparency</h4><p>Tools and processes that bring clarity to external and internal legal costs.</p></div>
+        <div class="session-card"><h4>Selecting the Right LegalTech Stack for Your Team</h4><p>How to evaluate, procure, and implement technology without creating new problems.</p></div>
+        <div class="session-card"><h4>Collaborating with Procurement, Compliance &amp; Finance</h4><p>Breaking down silos to deliver better outcomes for the business.</p></div>
+        <div class="session-card"><h4>Change Management: Driving LegalTech Adoption Internally</h4><p>Why technology fails without people strategy &mdash; and what good adoption looks like.</p></div>
+      </div>
+    </div>
+
+    <div class="track-panel" id="track-2">
+      <div class="track-panel-title">Risk, Compliance &amp; ESG</div>
+      <div class="sessions-grid">
+        <div class="session-card"><h4>ESG Compliance Tracking Tools &mdash; What Works</h4><p>Separating the genuinely useful from the box-ticking: practical ESG compliance approaches.</p></div>
+        <div class="session-card"><h4>Data Privacy &amp; Cross-Border Compliance Challenges</h4><p>Navigating an increasingly fragmented global data privacy landscape.</p></div>
+        <div class="session-card"><h4>Anti-Money Laundering &amp; KYC Automation</h4><p>Where technology is accelerating AML and KYC processes &mdash; and the risks it introduces.</p></div>
+        <div class="session-card"><h4>Managing Regulatory Change at Scale</h4><p>Systems and structures for keeping pace with a rapidly evolving regulatory environment.</p></div>
+        <div class="session-card"><h4>Contract Risk Assessment &amp; Mitigation Using Tech</h4><p>Using technology to identify, flag, and manage risk at the contract level.</p></div>
+      </div>
+    </div>
+
+    <div class="track-panel" id="track-3">
+      <div class="track-panel-title">Technology &amp; Innovation in Law Firms</div>
+      <div class="sessions-grid">
+        <div class="session-card"><h4>Billing, Timekeeping &amp; CRM Tools &mdash; What's Worth the Investment?</h4><p>An honest review of the tools law firms are actually getting value from.</p></div>
+        <div class="session-card"><h4>Tech-Enabled Client Collaboration in Law Firms</h4><p>How technology is reshaping the client relationship and service delivery model.</p></div>
+        <div class="session-card"><h4>How Mid-Size Firms Can Compete with BigLaw Using Technology</h4><p>Levelling the playing field through smart technology adoption and differentiation.</p></div>
+        <div class="session-card"><h4>LPM (Legal Project Management) in a Tech-Supported Practice</h4><p>Embedding LPM disciplines with the support of the right tools and processes.</p></div>
+        <div class="session-card"><h4>Automating Litigation Support &amp; Discovery</h4><p>The current state of litigation tech and where automation is delivering real efficiency.</p></div>
+      </div>
+    </div>
+
+    <div class="track-panel" id="track-4">
+      <div class="track-panel-title">Data, Security &amp; Governance</div>
+      <div class="sessions-grid">
+        <div class="session-card"><h4>Cyber Risk, Data Breaches &amp; the Role of Legal</h4><p>How legal teams are taking greater ownership of cyber risk strategy and incident response.</p></div>
+        <div class="session-card"><h4>AI Auditability &amp; Legal Implications of Black-Box Tools</h4><p>What happens when you can't explain how an AI decision was made &mdash; and legal gets the call.</p></div>
+        <div class="session-card"><h4>Governing Data Ownership Across Teams &amp; Borders</h4><p>Practical frameworks for managing data rights and responsibilities in complex organisations.</p></div>
+        <div class="session-card"><h4>Managing Data for Litigation, Investigations &amp; eDiscovery</h4><p>Best practices for data preservation, collection, and review in a tech-enabled environment.</p></div>
+        <div class="session-card"><h4>Shadow IT &amp; Legal's Responsibility in the Cloud Era</h4><p>When employees use unapproved tools, who owns the risk &mdash; and what should legal do about it?</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section" id="agenda">
+  <div class="timeline-inner">
+    <span class="label">The Day</span>
+    <h2 class="section-title">Agenda at a Glance</h2>
+    <p class="section-body" style="margin-top:16px;">A structured, high-value day from registration to reception. You choose which roundtable sessions to attend.</p>
+    <div class="timeline" style="margin-top:52px;">
+      <div class="tl-item"><div class="tl-time">7:30</div><div class="tl-body"><h4>Registration &amp; Welcome Coffee</h4></div></div>
+      <div class="tl-item"><div class="tl-time">8:00</div><div class="tl-body"><h4>Welcome Address &amp; Opening Keynote</h4></div></div>
+      <div class="tl-item"><div class="tl-time">8:35</div><div class="tl-body"><h4>1st Roundtable Discussion &mdash; Your Choice of Track</h4><p>5 concurrent sessions running simultaneously across all tracks</p></div></div>
+      <div class="tl-item dim"><div class="tl-time">9:40</div><div class="tl-body"><h4>Networking / 1-on-1 Meetings &amp; Refreshment Break</h4></div></div>
+      <div class="tl-item"><div class="tl-time">10:15</div><div class="tl-body"><h4>2nd Roundtable Discussion &mdash; Your Choice of Track</h4></div></div>
+      <div class="tl-item dim"><div class="tl-time">11:20</div><div class="tl-body"><h4>Networking / 1-on-1 Meetings (Two Slots)</h4></div></div>
+      <div class="tl-item"><div class="tl-time">12:10</div><div class="tl-body"><h4>3rd Roundtable Discussion &mdash; Your Choice of Track</h4></div></div>
+      <div class="tl-item dim"><div class="tl-time">13:10</div><div class="tl-body"><h4>Networking Lunch &amp; Industry Presentation</h4></div></div>
+      <div class="tl-item"><div class="tl-time">14:35</div><div class="tl-body"><h4>4th Roundtable Discussion &mdash; Your Choice of Track</h4></div></div>
+      <div class="tl-item dim"><div class="tl-time">15:40</div><div class="tl-body"><h4>Networking / 1-on-1 Meetings (Two Slots) &amp; Afternoon Coffee</h4></div></div>
+      <div class="tl-item"><div class="tl-time">16:40</div><div class="tl-body"><h4>5th Roundtable Discussion &mdash; Your Choice of Track</h4></div></div>
+      <div class="tl-item"><div class="tl-time">17:40</div><div class="tl-body"><h4>Canap&eacute; &amp; Drinks Reception</h4><p>Continue the conversations from the room</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO ATTENDS -->
+<section class="who" id="who">
+  <div class="who-inner">
+    <span class="label">Who Attends</span>
+    <h2 class="section-title light">Senior Legal Leadership, Exclusively</h2>
+    <p class="section-body light" style="margin-top:16px;">Attendance is by invitation and application only. We cap the room at 60&ndash;80 to ensure every delegate is a genuine peer to every other person in the room.</p>
+    <div class="roles-grid" style="margin-top:52px;">
+      <div class="role-card"><div class="role-icon">&#9878;&#65039;</div><h4>General Counsel</h4><p>FTSE, Fortune 500 &amp; high-growth businesses</p></div>
+      <div class="role-card"><div class="role-icon">&#128100;</div><h4>Head of Legal</h4><p>Senior in-house legal leads across all sectors</p></div>
+      <div class="role-card"><div class="role-icon">&#9881;&#65039;</div><h4>Legal Operations Director</h4><p>Driving efficiency &amp; transformation in legal functions</p></div>
+      <div class="role-card"><div class="role-icon">&#128161;</div><h4>Legal Innovation Leader</h4><p>Technology adoption, change management, future of law</p></div>
+      <div class="role-card"><div class="role-icon">&#127963;&#65039;</div><h4>Managing Partner</h4><p>Law firm leadership navigating a changing market</p></div>
+      <div class="role-card"><div class="role-icon">&#128202;</div><h4>Chief Legal Officer</h4><p>Board-level legal &amp; compliance leadership</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="sponsors-section" id="sponsors">
+  <div class="sponsors-inner">
+    <div class="sponsors-left">
+      <span class="label">Sponsorship</span>
+      <h2 class="section-title">Reach the Decision-Makers</h2>
+      <p class="section-body" style="margin-top:20px;">Sponsoring the LegalTech Executive Roundtable puts your brand in front of 60&ndash;80 senior legal leaders in a format designed for real conversation, not passive exposure.</p>
+      <div class="sponsor-benefits" style="margin-top:32px;">
+        <div class="sponsor-benefit"><div class="sb-num">01</div><div class="sb-text"><strong>Direct access to decision-makers</strong> &mdash; every delegate has budget authority or direct influence over LegalTech procurement.</div></div>
+        <div class="sponsor-benefit"><div class="sb-num">02</div><div class="sb-text"><strong>Meaningful conversations, not passive exposure</strong> &mdash; the roundtable format creates space for genuine engagement with your target audience.</div></div>
+        <div class="sponsor-benefit"><div class="sb-num">03</div><div class="sb-text"><strong>Curated 1-on-1 meetings</strong> &mdash; pre-matched meetings with delegates whose needs align with your offering.</div></div>
+        <div class="sponsor-benefit"><div class="sb-num">04</div><div class="sb-text"><strong>Post-event insights report</strong> &mdash; access to key themes and takeaways from the day's discussions.</div></div>
+      </div>
+      <a href="mailto:info@globalnetworkforums.com" class="btn-gold" style="margin-top:36px;">Request Sponsorship Pack</a>
+    </div>
+    <div class="sponsors-right">
+      <h3>Sponsorship Enquiry</h3>
+      <p>Tell us about your company and we'll send you our full sponsorship prospectus.</p>
+      <div class="sponsor-form-fields">
+        <input class="form-field" type="text"  placeholder="Your name" />
+        <input class="form-field" type="text"  placeholder="Company" />
+        <input class="form-field" type="email" placeholder="Email address" />
+        <input class="form-field" type="tel"   placeholder="Phone number (optional)" />
+        <button class="form-submit" onclick="handleSponsorSubmit()">Send Enquiry &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PASSES -->
+<section class="passes-section" id="register">
+  <div class="passes-inner">
+    <span class="label">Delegate Passes</span>
+    <h2 class="section-title light">Secure Your Place</h2>
+    <p class="section-body light" style="margin-top:16px;">Places are limited to 60&ndash;80 delegates. All applications are reviewed to ensure the right room composition. Early registration is strongly advised.</p>
+    <div class="passes-grid">
+      <div class="pass-card">
+        <div class="pass-tier">Early Bird Pass</div>
+        <div class="pass-price"><sup>&pound;</sup>595</div>
+        <div class="pass-note">Limited availability</div>
+        <ul class="pass-features">
+          <li>Full day &mdash; all 5 roundtable sessions</li>
+          <li>Personalised agenda</li>
+          <li>Structured 1-on-1 meetings</li>
+          <li>Networking lunch &amp; reception</li>
+          <li>Post-event insights report</li>
+          <li>Delegate directory access</li>
+        </ul>
+        <a href="mailto:info@globalnetworkforums.com?subject=Early Bird Delegate Pass Enquiry" class="btn-outline" style="display:block;text-align:center;margin-top:28px;">Register Interest</a>
+      </div>
+      <div class="pass-card" style="border-color:rgba(200,168,75,0.4);">
+        <div class="pass-tier">Standard Pass</div>
+        <div class="pass-price"><sup>&pound;</sup>795</div>
+        <div class="pass-note">Standard registration</div>
+        <ul class="pass-features">
+          <li>Full day &mdash; all 5 roundtable sessions</li>
+          <li>Personalised agenda</li>
+          <li>Structured 1-on-1 meetings</li>
+          <li>Networking lunch &amp; reception</li>
+          <li>Post-event insights report</li>
+          <li>Delegate directory access</li>
+        </ul>
+        <a href="mailto:info@globalnetworkforums.com?subject=Standard Delegate Pass Enquiry" class="btn-gold" style="display:block;text-align:center;margin-top:28px;">Register Interest</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Ready to Join the Conversation?</h2>
+  <p>Whether you're a delegate looking to join the room, or a sponsor looking to reach it &mdash; get in touch today.</p>
+  <div class="cta-actions">
+    <a href="mailto:info@globalnetworkforums.com?subject=Delegate Pass Enquiry" class="btn-dark">Request a Delegate Pass</a>
+    <a href="mailto:info@globalnetworkforums.com?subject=Sponsorship Enquiry" class="btn-dark-outline">Sponsorship Enquiry</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Global <span>Network</span> Forums</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:6px;letter-spacing:0.5px;">
+        LegalTech Executive Roundtable &middot; London &middot; 30 June 2026
+      </div>
+    </div>
+    <div class="footer-info">
+      <a href="mailto:info@globalnetworkforums.com">info@globalnetworkforums.com</a><br>
+      <a href="https://globalnetworkforums.com">globalnetworkforums.com</a><br>
+      <span style="margin-top:4px;display:block;">&copy; 2026 Global Network Forums. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function showTrack(index, btn) {
+  document.querySelectorAll('.track-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.track-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.getElementById('track-' + index).classList.add('active');
+  btn.classList.add('active');
+}
+function handleSponsorSubmit() {
+  var fields = document.querySelectorAll('.sponsor-form-fields .form-field');
+  var name    = fields[0].value.trim();
+  var company = fields[1].value.trim();
+  var email   = fields[2].value.trim();
+  if (!name || !company || !email) {
+    alert('Please fill in your name, company, and email address.');
+    return;
+  }
+  window.location.href = 'mailto:info@globalnetworkforums.com'
+    + '?subject=Sponsorship Enquiry - ' + encodeURIComponent(company)
+    + '&body=' + encodeURIComponent('Name: ' + name + '\nCompany: ' + company + '\nEmail: ' + email);
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  var ham  = document.querySelector('.nav-hamburger');
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !ham.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+</script>
+
+</body>
+</html>
